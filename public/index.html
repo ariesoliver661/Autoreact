@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NASH FB AUTO REACT</title>
+    <title>Project Likers</title>
     <link rel="icon" type="image/jpg" href="https://i.imgur.com/LYGQz6s.jpeg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <style>
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -30,8 +33,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e;
-            color: #fff;
+            background-image: url("https://i.ibb.co/8zsq4GX/photo-1414609245224-afa02bfb3fda.jpg");
+            background-size: cover;
+            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
@@ -64,6 +68,15 @@
             margin-bottom: 20px;
             color: #00aaff;
             font-size: 24px;
+            font-weight: bold;
+            animation: bounce 1s ease-in-out;
+        }
+        
+        ul {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #fff;
+            font-size: 15px;
             font-weight: bold;
             animation: bounce 1s ease-in-out;
         }
@@ -195,8 +208,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="intro">NASH FB AUTO REACT</div>
-        <h1>lorem îpsum</h1>
+        <div class="intro">Project Likers</div>
+        <h1>By AriesOliver</h1>
         <form id="reactForm">
             <label for="link">Post Link:</label>
             <input type="text" id="link" name="link" required>
@@ -218,13 +231,9 @@
             <button type="submit">Send Reaction</button>
         </form>
         <div id="response"></div>
-        <div>
-            <a href="https://simple-portfolio-mauve.vercel.app/" class="cokie">PORFOLIO😑</a>
-            <a href="https://nash-rahh.onrender.com" class="cokie">FB AUTOBOT</a>
-        </div>
         <div class="info-box">
             <p>Version: 2.0.1</p>
-            <p>Welcome to the Facebook auto reaction tool made by joshua Apostol! This tool allows you to send reactions to FB posts.</p>
+            <p>Welcome to the Facebook auto reaction (Project Likers) tool made by AriesOliver! This tool allows you to send reactions to FB posts.</p>
             <h2>HOW TO USE</h2>
             <p>➡️ Use a dummy account</p>
             <p>➡️ Get the cookie of the dummy account</p>
@@ -233,12 +242,33 @@
             <p>➡️ Wait for more updates...</p>
         </div>
         <div class="fb-link">
-            <p>Visit the developer and message to report any bugs you encounter</p>
-            <a href="https://www.facebook.com/profile.php?id=100088690249020" target="_blank">CONTACT DEVELOPER</a>
+            <ul>Visit the developer and message to report any bugs you encounter</ul>
+            <a href="https://www.facebook.com/Ariesoliver77 target="_blank">CONTACT DEVELOPER</a>
         </div>
     </div>
     <script>
-    document.getElementById('reactForm').addEventListener('submit', async (event) => {
+        window.onload = function() {
+            let sound = new Howl({
+                src: ["https://files.catbox.moe/th2cwl.mp4"],
+                autoplay: true,
+                loop: true,
+                format: ["mp4"],
+                volume: 1,
+                onend: () => {},
+            });
+            sound.play();
+
+            Swal.fire({
+                title: "Hello there! 👋",
+                text: "Welcome to Project Likers",
+                imageUrl: "https://i.imgur.com/fE9Jvtp.jpeg",
+                imageWidth: 300,
+                imageHeight: 200,
+                imageAlt: "AriesOliver",
+            });
+        }
+
+        document.getElementById('reactForm').addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const link = document.getElementById('link').value;
@@ -279,5 +309,4 @@
     });
 </script>
 </body>
-  </html>
-  
+                                             </html>
