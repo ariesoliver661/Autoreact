@@ -7,7 +7,7 @@ const port = 3000;
 
 const cooldowns = new Map();
 
-app.use(express.static(path.join(__dirname, 'public', 'index.html'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 app.get('*', (req, res) => {
