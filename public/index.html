@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASH FB AUTO REACT</title>
+    <link rel="icon" type="image/jpg" href="https://i.imgur.com/LYGQz6s.jpeg">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .container {
+            background-color: #16213e;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .intro {
+            font-size: 30px;
+            font-weight: bold;
+            color: #007bff;
+            animation: slideIn 1s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #00aaff;
+            font-size: 24px;
+            font-weight: bold;
+            animation: bounce 1s ease-in-out;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #ccc;
+            font-weight: 600;
+        }
+
+        input, select {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+            background-color: #1f4068;
+            color: #fff;
+        }
+
+        input:focus, select:focus {
+            border-color: #00aaff;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+
+        #response {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .error {
+            color: #ff4c4c;
+        }
+
+        .success {
+            color: #4cff4c;
+        }
+
+        .info-box {
+            background-color: #0f3460;
+            border: 1px solid #cce5ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .info-box h2 {
+            margin: 0 0 10px 0;
+            color: #00aaff;
+        }
+
+        .info-box p {
+            margin: 10px 0;
+            color: #ccc;
+        }
+
+        .fb-link a {
+            padding: 10px 15px;
+            background-color: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .fb-link a:hover {
+            background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+
+        .cokie {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #00aaff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cokie:hover {
+            background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+        
+        .sms {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sms:hover {
+            background-color: #0088cc;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="intro">NASH FB AUTO REACT</div>
+        <h1>lorem îpsum</h1>
+        <form id="reactForm">
+            <label for="link">Post Link:</label>
+            <input type="text" id="link" name="link" required>
+            
+            <label for="type">React Type:</label>
+            <select id="type" name="type" required>
+                <option value="LIKE">👍 LIKE</option>
+                <option value="LOVE">❤️ LOVE</option>
+                <option value="CARE">🥰 CARE</option>
+                <option value="HAHA">😂 HAHA</option>
+                <option value="WOW">😮 WOW</option>
+                <option value="SAD">😢 SAD</option>
+                <option value="ANGRY">😡 ANGRY</option>
+            </select>
+            
+            <label for="cookie">Cookie:</label>
+            <input type="text" id="cookie" name="cookie" required>
+            
+            <button type="submit">Send Reaction</button>
+        </form>
+        <div id="response"></div>
+        <div>
+            <a href="https://simple-portfolio-mauve.vercel.app/" class="cokie">PORFOLIO😑</a>
+            <a href="https://nash-rahh.onrender.com" class="cokie">FB AUTOBOT</a>
+        </div>
+        <div class="info-box">
+            <p>Version: 2.0.1</p>
+            <p>Welcome to the Facebook auto reaction tool made by joshua Apostol! This tool allows you to send reactions to FB posts.</p>
+            <h2>HOW TO USE</h2>
+            <p>➡️ Use a dummy account</p>
+            <p>➡️ Get the cookie of the dummy account</p>
+            <p>➡️ Get a cookie on the Kiwi browser extension</p>
+            <p>➡️ Use the Cookie Dough extension</p>
+            <p>➡️ Wait for more updates...</p>
+        </div>
+        <div class="fb-link">
+            <p>Visit the developer and message to report any bugs you encounter</p>
+            <a href="https://www.facebook.com/profile.php?id=100088690249020" target="_blank">CONTACT DEVELOPER</a>
+        </div>
+    </div>
+    <script>
+    document.getElementById('reactForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const link = document.getElementById('link').value;
+        const type = document.getElementById('type').value;
+        const cookieInput = document.getElementById('cookie');
+
+        const cookie = cookieInput.value;
+
+        const responseElement = document.getElementById('response');
+        responseElement.textContent = 'Sending reaction...';
+        responseElement.className = '';
+
+        try {
+            const response = await fetch('/sendreact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ link, type, cookie })
+            });
+
+            const result = await response.json();
+            if (result.error) {
+                responseElement.textContent = `Error: ${result.error}`;
+                responseElement.className = 'error';
+            } else if (result.cookieError) {
+                responseElement.textContent = 'Invalid cookie. Please check your cookie and try again.';
+                responseElement.className = 'error';
+            } else {
+                responseElement.textContent = result.message;
+                responseElement.className = 'success';
+                cookieInput.value = '';
+            }
+        } catch (error) {
+            responseElement.textContent = 'An error occurred while sending the reaction. Please try again later.';
+            responseElement.className = 'error';
+        }
+    });
+</script>
+</body>
+  </html>
+  
